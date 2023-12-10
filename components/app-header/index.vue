@@ -6,7 +6,13 @@
         <NuxtLink to="" class="link">一加官网</NuxtLink>
       </div>
       <div class="content-right">
-        <span class="link">下载 OPPO 商城App</span>
+        <NuxtLink to="" class="link download">
+          <span>下载OPPO商城App</span>
+          <div class="app">
+            <img class="ecode" src="@/assets/images/ecode.png" alt="" />
+            <div class="name">扫码下载OPPO商城App</div>
+          </div>
+        </NuxtLink>
         <NuxtLink to="/login" class="link_border" target="_blank">
           <i class="iconfont icon-user"></i>登录</NuxtLink
         >
@@ -75,5 +81,28 @@ withDefaults(defineProps<IProps>(), {
 .icon-shoppingcart {
   font-size: 12px;
   opacity: 1;
+}
+.download {
+  position: relative;
+  .app {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    padding: 8px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
+    z-index: 10000;
+  }
+  .ecode {
+    width: 140px;
+    height: 140px;
+  }
+  .name {
+    color: #000;
+    margin-top: 2px;
+  }
+}
+.download:hover .app {
+  display: block;
 }
 </style>
