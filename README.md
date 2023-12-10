@@ -1,42 +1,5 @@
-# Nuxt 3 Minimal Starter
+# 使用nuxt开发OPPO官网
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+作为个人学习巩固nuxt的一个小项目~
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+![image-20231209003114364](imgs/README/image-20231209003114364.png)![image-20231209003130754](imgs/README/image-20231209003130754.png)![image-20231209003218882](imgs/README/image-20231209003218882.png)
