@@ -7,10 +7,12 @@
       </div>
       <div class="content-right">
         <span class="link">下载 OPPO 商城App</span>
-        <NuxtLink to="/login" class="link_border">
+        <NuxtLink to="/login" class="link_border" target="_blank">
           <i class="iconfont icon-user"></i>登录</NuxtLink
         >
-        <NuxtLink to="/register" class="link_border">注册</NuxtLink>
+        <NuxtLink to="/register" class="link_border" target="_blank"
+          >注册</NuxtLink
+        >
         <NuxtLink to="/cart" class="link"
           ><i class="iconfont icon-shoppingcart"></i>购物车</NuxtLink
         >

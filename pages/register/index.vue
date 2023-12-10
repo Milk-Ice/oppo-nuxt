@@ -6,6 +6,9 @@
 interface IProps {
   title?: string
 }
+definePageMeta({
+  layout: 'empty-layout'
+})
 withDefaults(defineProps<IProps>(), {
   title: ''
 })
