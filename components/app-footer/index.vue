@@ -1,5 +1,5 @@
 <template>
-  <div class="home">home</div>
+  <div class="app-header">app-header</div>
 </template>
 
 <script setup lang="ts">
@@ -12,7 +12,7 @@ withDefaults(defineProps<IProps>(), {
 </script>
 
 <style lang="scss">
-.home {
+.app-header {
   color: red;
 }
 </style>
