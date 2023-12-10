@@ -7,9 +7,13 @@
       </div>
       <div class="content-right">
         <span class="link">下载 OPPO 商城App</span>
-        <NuxtLink to="/login" class="link_border">登录</NuxtLink>
+        <NuxtLink to="/login" class="link_border">
+          <i class="iconfont icon-user"></i>登录</NuxtLink
+        >
         <NuxtLink to="/register" class="link_border">注册</NuxtLink>
-        <NuxtLink to="/cart" class="link">购物车</NuxtLink>
+        <NuxtLink to="/cart" class="link"
+          ><i class="iconfont icon-shoppingcart"></i>购物车</NuxtLink
+        >
       </div>
     </div>
   </div>
@@ -37,7 +41,7 @@ withDefaults(defineProps<IProps>(), {
   display: flex;
 }
 .content-left {
-  width: 850px;
+  width: 750px;
 }
 .link {
   display: inline-block;
@@ -58,5 +62,16 @@ withDefaults(defineProps<IProps>(), {
   padding: 0 14px;
   text-decoration: none;
   border-right: 1px solid #fff;
+}
+.iconfont {
+  margin-right: 6px;
+}
+.icon-user {
+  font-size: 12px;
+  opacity: 1;
+}
+.icon-shoppingcart {
+  font-size: 12px;
+  opacity: 1;
 }
 </style>

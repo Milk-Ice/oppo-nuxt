@@ -2,7 +2,11 @@
 // import ElementPlus from 'unplugin-element-plus/vite'
 export default defineNuxtConfig({
   // reset.css
-  css: ['normalize.css', '@/assets/css/global.scss'],
+  css: [
+    'normalize.css',
+    '@/assets/css/global.scss',
+    '~/assets/cus-font/iconfont.css'
+  ],
   vite: {
     css: {
       preprocessorOptions: {
