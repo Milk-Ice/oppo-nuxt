@@ -7,10 +7,20 @@
         <h1 class="title">OPPO商城</h1>
       </div>
       <ul class="category">
-        <li><NuxtLink class="link" to="/">OPPO专区</NuxtLink></li>
+        <!-- <li><NuxtLink class="link" to="/">OPPO专区</NuxtLink></li>
         <li><NuxtLink class="link" to="/">OnePlus专区</NuxtLink></li>
         <li><NuxtLink class="link" to="/">智能硬件</NuxtLink></li>
-        <li><NuxtLink class="link" to="/">服务</NuxtLink></li>
+        <li><NuxtLink class="link" to="/">服务</NuxtLink></li> -->
+        <template v-for="(item, index) in navbars" :key="index"
+          ><li>
+            <NuxtLink
+              class="link"
+              :to="getPagePath(item)"
+              @click="handleNavBarClick(index)"
+              >{{ item.title }}</NuxtLink
+            >
+          </li></template
+        >
       </ul>
       <Search></Search>
     </div>
@@ -18,12 +28,30 @@
 </template>
 
 <script setup lang="ts">
-// interface IProps {
-//   title?: string
-// }
-// const props = withDefaults(defineProps<IProps>(), {
-//   title: ''
-// })
+import type { INavBars } from '~~/types/home'
+interface IProps {
+  navbars: INavBars[]
+}
+withDefaults(defineProps<IProps>(), {
+  navbars: () => []
+})
+// 记录当前点击的索引
+let currentIndex = ref<number>(0)
+// 点击navBar的逻辑
+function handleNavBarClick(index: number) {
+  currentIndex.value = index
+  console.log(currentIndex.value)
+}
+// 动态匹配路由,注意使用computed
+const getPagePath = computed(() => {
+  return (item: INavBars) => {
+    let path = '/'
+    if (item.type !== 'oppo') {
+      path += item.type
+    }
+    return path
+  }
+})
 </script>
 
 <style lang="scss" scoped>
