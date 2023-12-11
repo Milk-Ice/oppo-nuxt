@@ -36,7 +36,7 @@ withDefaults(defineProps<IProps>(), {
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .app-footer {
   height: 40px;
   display: flex;
@@ -59,6 +59,7 @@ withDefaults(defineProps<IProps>(), {
   line-height: 14px;
   /* 左右加padding就可以有对齐的竖线 */
   padding: 0 14px;
+  opacity: 0.8; // 字体变暗
   text-decoration: none;
 }
 .link_border {
@@ -69,6 +70,7 @@ withDefaults(defineProps<IProps>(), {
   line-height: 14px;
   padding: 0 14px;
   text-decoration: none;
+  opacity: 0.8; // 字体变暗
   border-right: 1px solid #fff;
 }
 .iconfont {

@@ -1,18 +1,6 @@
 <template>
-  <div class="page-not-Found">page-not-Found</div>
+  <div class="page-not-found">page not found : 404</div>
 </template>
+<script lang="ts" setup></script>
 
-<script setup lang="ts">
-interface IProps {
-  title?: string
-}
-withDefaults(defineProps<IProps>(), {
-  title: ''
-})
-</script>
-
-<style lang="scss">
-.page-not-Found {
-  color: red;
-}
-</style>
+<style lang="scss"></style>
