@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// import ElementPlus from 'unplugin-element-plus/vite'
+import ElementPlus from 'unplugin-element-plus/vite'
 export default defineNuxtConfig({
   // reset.css
   css: [
@@ -14,7 +14,9 @@ export default defineNuxtConfig({
           additionalData: "@use '@/assets/css/variables.scss' as *;"
         }
       }
-    }
+    },
+    // 实现自动导入样式
+    plugins: [ElementPlus()]
   },
   app: {
     // 可以给所有的页面的head添加一下SEO的信息
@@ -35,6 +37,10 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
       noscript: [{ children: 'Javascript is required' }]
     }
+  },
+  build: {
+    // 该文件需要进行babel转义
+    transpile: ['element-plus/es']
   },
   modules: ['@pinia/nuxt']
 })

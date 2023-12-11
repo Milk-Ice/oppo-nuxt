@@ -1,5 +1,7 @@
 <template>
-  <div class="home">home</div>
+  <div class="home wrapper">
+    <my-carousel></my-carousel>
+  </div>
 </template>
 
 <script setup lang="ts">
