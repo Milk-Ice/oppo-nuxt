@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia'
 import { getHomeInfoAPI } from '~~/service/home'
 import type { HomeInfoDataType } from '~~/service/home'
+import { IHomeInfo } from '~~/types/home'
 const homeStore = defineStore('homeStore', {
-  state: () => {
+  state: (): IHomeInfo => {
     return {
       navbars: [],
       banners: [],
@@ -11,8 +12,11 @@ const homeStore = defineStore('homeStore', {
   },
   actions: {
     async fetchHomeData(type: HomeInfoDataType) {
-      const res = await getHomeInfoAPI(type)
-      console.log(res.data.value)
+      const { data } = await getHomeInfoAPI(type)
+      // console.log(res.data.value)
+      this.navbars = data.value?.data.navbars || []
+      this.banners = data.value?.data.banners || []
+      this.categorys = data.value?.data.categorys || []
     }
   }
 })
