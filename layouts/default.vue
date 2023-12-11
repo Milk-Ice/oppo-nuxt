@@ -10,8 +10,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import { getHomeInfoAPI } from '~~/service/home'
+// import { getHomeInfoAPI } from '~~/service/home'
 
-const { data } = await getHomeInfoAPI('oppo')
-console.log(data.value?.data)
+// const { data } = await getHomeInfoAPI('oppo')
+// console.log(data.value?.data)
 </script>
