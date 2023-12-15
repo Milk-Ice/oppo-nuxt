@@ -1,23 +1,9 @@
 <template>
   <div class="grid-view">
     <template v-for="(item, index) in 10" :key="index">
-      <div class="category-items">
-        <img
-          class="image"
-          src="https://dsfs.oppo.com/archives/202112/2021121506121861b9bceeac5d2.png?_w_=320&_h_=320"
-          alt=""
-        />
-        <div class="infos">
-          <div class="skuName">
-            OPPO Find N 全新折叠旗舰 8G+256G 星夜 官方标配
-          </div>
-          <div class="activityList">
-            <span class="activityInfo">12期免息</span>
-            <span class="activityInfo">缺货</span>
-          </div>
-          <div class="price"><span>到手价</span> <span>￥5489</span></div>
-        </div>
-      </div>
+      <slot>
+        <div class="view-item"><gridview-item /></div>
+      </slot>
     </template>
   </div>
 </template>
@@ -39,18 +25,17 @@ withDefaults(defineProps<IProps>(), {
   margin-top: 40px;
   @include normalFlex();
   align-items: center;
-  @include border();
-  .infos {
-    @include border();
-    .skuName {
-      @include textEllipsis();
-    }
-  }
-
-  .image {
-    @include border();
-    width: 200px;
-    height: 200px;
+  flex-wrap: wrap;
+  /* @include border(); */
+  .view-item {
+    /* @include border(red); */
+    /* height: $gridItemHeight; */
+    width: 20%;
+    padding-right: 18px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    background-color: $bgGrayColor;
+    cursor: pointer;
   }
 }
 </style>
