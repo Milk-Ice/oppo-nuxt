@@ -37,7 +37,7 @@ export interface ICateGorys {
   type: string
   url: string
   moduleCode: string
-  productDetailss: ProductDetailss[]
+  productDetailss?: ProductDetailss[]
   link: string
 }
 

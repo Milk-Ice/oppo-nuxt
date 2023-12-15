@@ -1,0 +1,23 @@
+<template>
+  <div class="grid-title">{{ title }}</div>
+</template>
+
+<script setup lang="ts">
+interface IProps {
+  title?: string
+}
+withDefaults(defineProps<IProps>(), {
+  title: ''
+})
+</script>
+
+<style lang="scss" scoped>
+.grid-title {
+  padding-top: 60px;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 500;
+
+  /* @include border(); */
+}
+</style>

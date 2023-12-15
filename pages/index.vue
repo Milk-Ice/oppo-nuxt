@@ -2,6 +2,8 @@
   <div class="home wrapper">
     <my-carousel :banners="banners"></my-carousel>
     <tab-category :categorys="categorys" @item-click="handleItemClick" />
+    <grid-title title="Find N 系列" />
+    <grid-view :productDetailss="categorys[0].productDetailss" />
   </div>
 </template>
 
@@ -20,6 +22,7 @@ const { banners, categorys } = storeToRefs(homeStore)
 function handleItemClick(item: ICateGorys) {
   console.log(item.title)
 }
+// console.log(categorys.value[0].productDetailss)
 </script>
 
 <style lang="scss">
