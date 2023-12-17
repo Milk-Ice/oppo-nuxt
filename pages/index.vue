@@ -21,7 +21,13 @@ import { ICateGorys } from '~~/types/home'
 const homeStore = useHomeStore()
 const { banners, categorys } = storeToRefs(homeStore)
 function handleItemClick(item: ICateGorys) {
-  console.log(item.title)
+  // console.log(item.title)
+  return navigateTo({
+    path: '/oppo-details',
+    query: {
+      type: item.title
+    }
+  })
 }
 // console.log(categorys.value[0].productDetailss)
 </script>
