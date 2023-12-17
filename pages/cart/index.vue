@@ -3,12 +3,12 @@
 </template>
 
 <script setup lang="ts">
-interface IProps {
-  title?: string
-}
-withDefaults(defineProps<IProps>(), {
-  title: ''
-})
+// interface IProps {
+//   title?: string
+// }
+// withDefaults(defineProps<IProps>(), {
+//   title: ''
+// })
 </script>
 
 <style lang="scss">

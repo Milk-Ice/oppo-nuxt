@@ -77,7 +77,7 @@ interface IFooterIcon {
   picStr?: string
   title?: string
 }
-const props = defineProps({
+defineProps({
   footerIcons: {
     type: Array<IFooterIcon>,
     default: () => [

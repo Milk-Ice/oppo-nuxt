@@ -49,13 +49,14 @@ withDefaults(defineProps<IProps>(), {
   }
   .activityList {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 10px 10px;
     color: $priceColor;
     .activityInfo {
-      padding: 1px 7px;
-      margin: 0px 10px;
+      padding: 2px 7px;
+      margin: 3px 10px;
       border: 1px solid $priceColor;
       /* border-radius: 10%; */
     }
