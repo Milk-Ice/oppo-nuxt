@@ -1,3 +1,5 @@
+export type IDetailsProductType = 'oppo' | 'air' | 'watch' | 'tablet'
+
 export interface IDetails {
   id?: number
   title?: string
