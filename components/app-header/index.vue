@@ -96,6 +96,7 @@ withDefaults(defineProps<IProps>(), {
     z-index: 10000;
   }
   .ecode {
+    z-index: 101;
     width: 140px;
     height: 140px;
   }

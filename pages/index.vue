@@ -2,8 +2,9 @@
   <div class="home wrapper">
     <my-carousel :banners="banners"></my-carousel>
     <tab-category :categorys="categorys" @item-click="handleItemClick" />
-    <grid-title title="Find N 系列" />
-    <grid-view :productDetailss="categorys[0].productDetailss" />
+    <template v-for="category in categorys" :key="category.id"
+      ><section-category :category="category"></section-category
+    ></template>
   </div>
 </template>
 
@@ -27,5 +28,6 @@ function handleItemClick(item: ICateGorys) {
 
 <style lang="scss">
 .home {
+  background-color: $bgGrayColor;
 }
 </style>

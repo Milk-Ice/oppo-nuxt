@@ -39,7 +39,7 @@ function handleCarouselChange(index: number) {
 <style lang="scss" scoped>
 .carousel {
   position: relative;
-  z-index: -99;
+  z-index: 100;
 }
 .dots {
   height: 40px;

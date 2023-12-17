@@ -1,8 +1,13 @@
 <template>
   <div class="grid-view">
-    <template v-for="(item, index) in 10" :key="index">
+    <div class="view-item first">
+      <img :src="categoryUrl" alt="" />
+    </div>
+    <template v-for="(item, index) in productDetailss" :key="index">
       <slot>
-        <div class="view-item"><gridview-item /></div>
+        <div class="view-item">
+          <gridview-item :productDetailss="item" />
+        </div>
       </slot>
     </template>
   </div>
@@ -13,9 +18,11 @@ import type { ProductDetailss } from '~~/types/home'
 
 interface IProps {
   productDetailss?: ProductDetailss[]
+  categoryUrl: string
 }
 withDefaults(defineProps<IProps>(), {
-  productDetailss: () => []
+  productDetailss: () => [],
+  categoryUrl: ''
 })
 // console.log('props')
 </script>
@@ -36,6 +43,18 @@ withDefaults(defineProps<IProps>(), {
     box-sizing: border-box;
     background-color: $bgGrayColor;
     cursor: pointer;
+  }
+  .first {
+    width: 40%;
+    & > img {
+      width: 100%;
+      height: 100%;
+      /* 动画效果 */
+      transition: all 0.2s linear;
+      &:hover {
+        @include hoverEffect();
+      }
+    }
   }
 }
 </style>
